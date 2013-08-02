@@ -16,7 +16,29 @@ describe GnomeKeyring::AttributeList do
     it "wraps its argument in an AttributeList object" do
       orig = GnomeKeyring::AttributeList.new
       copy = GnomeKeyring::AttributeList.wrap(orig.to_ptr)
-      orig.to_ptr.must_equal copy.to_ptr
+      copy.to_ptr.must_equal orig.to_ptr
+    end
+  end
+
+  describe ".from" do
+    it "wraps its argument's pointer in an AttributeList object" do
+      orig = GnomeKeyring::AttributeList.new
+      copy = GnomeKeyring::AttributeList.from(orig)
+      copy.to_ptr.must_equal orig.to_ptr
+    end
+
+    it "wraps an empty array" do
+      attr = GnomeKeyring::AttributeList.from([])
+      attr.to_a.must_equal []
+    end
+
+    it "wraps an array of Attribute" do
+      att = GnomeKeyring::Attribute.new
+      att.name = 'foo'
+      attr = GnomeKeyring::AttributeList.from([att])
+      arr = attr.to_a
+      arr.length.must_equal 1
+      arr.first.name.must_equal 'foo'
     end
   end
 

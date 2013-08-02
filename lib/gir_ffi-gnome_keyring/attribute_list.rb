@@ -11,6 +11,14 @@ module GnomeKeyring
       super GnomeKeyring::Attribute, ptr
     end
 
+    def self.from it
+      case it
+      when self then it
+      when FFI::Pointer then wrap it
+      else self.new.tap {|arr| arr.append_vals it }
+      end
+    end
+
     # FIXME: Remove once GLib::Array#index has been fixed
     def index idx
       ptr = @struct[:data] + idx * get_element_size
