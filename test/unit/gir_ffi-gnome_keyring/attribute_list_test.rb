@@ -22,4 +22,15 @@ describe GnomeKeyring::AttributeList do
       attr.type.must_equal :string
     end
   end
+
+  describe "#append_uint32" do
+    it "appends a uint32 attribute" do
+      list = GnomeKeyring::AttributeList.new
+      list.append_uint32 'baz', 42
+      attr = list.index(0)
+      attr.name.must_equal 'baz'
+      attr.get_uint32.must_equal 42
+      attr.type.must_equal :uint32
+    end
+  end
 end
