@@ -4,7 +4,11 @@ module GnomeKeyring
   class AttributeList < GLib::Array
     def self.new
       ptr = GnomeKeyring::Lib.gnome_keyring_attribute_list_new
-      wrap(GnomeKeyring::Attribute, ptr)
+      wrap(ptr)
+    end
+
+    def self.wrap ptr
+      super GnomeKeyring::Attribute, ptr
     end
 
     # FIXME: Remove once GLib::Array#index has been fixed

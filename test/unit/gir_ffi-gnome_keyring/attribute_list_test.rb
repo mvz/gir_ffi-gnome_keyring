@@ -12,6 +12,14 @@ describe GnomeKeyring::AttributeList do
     end
   end
 
+  describe ".wrap" do
+    it "wraps its argument in an AttributeList object" do
+      orig = GnomeKeyring::AttributeList.new
+      copy = GnomeKeyring::AttributeList.wrap(orig.to_ptr)
+      orig.to_ptr.must_equal copy.to_ptr
+    end
+  end
+
   describe "#append_string" do
     it "appends a string attribute" do
       list = GnomeKeyring::AttributeList.new
