@@ -1,12 +1,6 @@
+require 'gir_ffi-gnome_keyring/attribute'
+
 module GnomeKeyring
-  load_class :Attribute
-
-  class Attribute
-    setup_method 'list_new'
-    setup_method 'list_append_string'
-    setup_method 'list_append_uint32'
-  end
-
   class AttributeList < GLib::Array
     def self.new
       ptr = GnomeKeyring::Lib.gnome_keyring_attribute_list_new
