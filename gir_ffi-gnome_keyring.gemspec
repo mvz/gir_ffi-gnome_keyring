@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "gir_ffi-gnome_keyring"
-  s.version = "0.3.0"
+  s.version = "0.0.1"
 
   s.summary = "GirFFI-based binding to GnomeKeyring"
 
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["README.md", "Changelog.md"]
   s.test_files = `git ls-files -z -- test`.split("\0")
 
-  s.add_runtime_dependency('gir_ffi', ["~> 0.6.0"])
+  s.add_runtime_dependency('gir_ffi', ["~> 0.6.5"])
 
   s.add_development_dependency('minitest', ["~> 5.0"])
   s.add_development_dependency('rake', ["~> 10.1.0"])
