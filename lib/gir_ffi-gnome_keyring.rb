@@ -9,12 +9,14 @@ require 'gir_ffi-gnome_keyring/found'
 module GnomeKeyring
   setup_method :find_items_sync
   setup_method :item_create_sync
+  setup_method :item_get_attributes_sync
   setup_method :item_set_attributes_sync
 
   class << self
     remove_method :find_items_sync
     remove_method :item_create_sync
     remove_method :item_set_attributes_sync
+    remove_method :item_get_attributes_sync
   end
 
   def self.find_items_sync(type, attributes)
@@ -37,6 +39,14 @@ module GnomeKeyring
                                                            update_if_exists,
                                                            _v7)
     return [_v8, _v7.to_value]
+  end
+
+  def self.item_get_attributes_sync(keyring, id)
+    _v1 = GirFFI::InPointer.from(:utf8, keyring)
+    _v3 = GirFFI::InOutPointer.for(:struct)
+    _v4 = GnomeKeyring::Lib.gnome_keyring_item_get_attributes_sync(_v1, id, _v3)
+    attributes = GnomeKeyring::AttributeList.wrap(_v3.to_value)
+    return [_v4, attributes]
   end
 
   def self.item_set_attributes_sync(keyring, id, attributes)
