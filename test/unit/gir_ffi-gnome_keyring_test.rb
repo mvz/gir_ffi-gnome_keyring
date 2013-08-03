@@ -44,4 +44,20 @@ describe GnomeKeyring do
       end
     end
   end
+
+  describe ".item_set_attributes_sync" do
+    it "calls Lib.gnome_keyring_item_set_attributes_sync with the correct values" do
+      body = lambda { |keyring, id, attributes|
+        GirFFI::ArgHelper.ptr_to_utf8(keyring).must_equal "foo"
+        id.must_equal 42
+        attributes.must_be_instance_of GnomeKeyring::AttributeList
+        :ok
+      }
+
+      GnomeKeyring::Lib.stub :gnome_keyring_item_set_attributes_sync, body do
+        result = GnomeKeyring.item_set_attributes_sync "foo", 42, []
+        result.must_equal :ok
+      end
+    end
+  end
 end
