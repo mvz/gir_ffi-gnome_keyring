@@ -28,7 +28,7 @@ describe GnomeKeyring do
         GirFFI::ArgHelper.ptr_to_utf8(secret).must_equal "secret-name"
         update_if_exists.must_equal false
 
-        item_id.write_int32 42
+        item_id.put_int32 0, 42
         :ok
       }
 
