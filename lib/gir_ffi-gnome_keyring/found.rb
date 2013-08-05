@@ -4,6 +4,9 @@ module GnomeKeyring
   load_class :Found
 
   class Found
+    remove_method :attributes
+    remove_method :attributes=
+
     def attributes
       struct = GnomeKeyring::Found::Struct.new(@struct.to_ptr)
       GnomeKeyring::AttributeList.wrap(struct[:attributes])
