@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "gir_ffi-gnome_keyring"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.summary = "GirFFI-based binding to GnomeKeyring"
 
