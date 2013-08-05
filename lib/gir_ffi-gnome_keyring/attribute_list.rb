@@ -19,12 +19,6 @@ module GnomeKeyring
       end
     end
 
-    # FIXME: Remove once GLib::Array#index has been fixed
-    def index idx
-      ptr = @struct[:data] + idx * get_element_size
-      GnomeKeyring::Attribute.wrap(ptr)
-    end
-
     def append_string name, value
       _v2 = GirFFI::InPointer.from(:utf8, name)
       _v3 = GirFFI::InPointer.from(:utf8, value)
