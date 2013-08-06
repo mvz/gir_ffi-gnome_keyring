@@ -2,7 +2,7 @@
 
 GirFFI-based bindings for GnomeKeyring
 
-[![Build Status](https://secure.travis-ci.org/mvz/gir_ffi-gnome_keyring.png)](http://travis-ci.org/mvz/gir-ffi-gnome_keyring)
+[![Build Status](https://secure.travis-ci.org/mvz/gir_ffi-gnome_keyring.png)](http://travis-ci.org/mvz/gir_ffi-gnome_keyring)
 
 ## Features
 
