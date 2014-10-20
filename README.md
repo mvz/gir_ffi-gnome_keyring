@@ -1,8 +1,16 @@
 # GirFFI-GnomeKeyring
 
+by Matijs van Zuijlen
+
+## Description
+
 GirFFI-based bindings for GnomeKeyring
 
-[![Build Status](https://secure.travis-ci.org/mvz/gir_ffi-gnome_keyring.png)](http://travis-ci.org/mvz/gir_ffi-gnome_keyring)
+## Status
+
+[![Gem Version](https://badge.fury.io/rb/gir_ffi-gnome_keyring.png)](http://badge.fury.io/rb/gir_ffi-gnome_keyring)
+[![Dependency Status](https://gemnasium.com/mvz/gir_ffi-gnome_keyring.png)](https://gemnasium.com/mvz/gir_ffi-gnome_keyring)
+[![Build Status](https://travis-ci.org/mvz/gir_ffi-gnome_keyring.png?branch=master)](https://travis-ci.org/mvz/gir_ffi-gnome_keyring)
 
 ## Features
 
