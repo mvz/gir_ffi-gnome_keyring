@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["README.md", "Changelog.md"]
   s.test_files = `git ls-files -z -- test`.split("\0")
 
-  s.add_runtime_dependency('gir_ffi', ["~> 0.7.0"])
+  s.add_runtime_dependency('gir_ffi', ["~> 0.8.0"])
   s.add_development_dependency('minitest', ["~> 5.0"])
   s.add_development_dependency('rake', ["~> 10.1"])
 
