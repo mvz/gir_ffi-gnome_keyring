@@ -1,12 +1,22 @@
-### 0.0.3 / 2014-01-11
+# Change log
+
+## 0.0.5 / 2016-01-21
+
+* Depend on GirFFI 0.9.0
+
+## 0.0.4 / 2015-09-20
+
+* Depend on GirFFI 0.8.0
+
+## 0.0.3 / 2014-01-11
 
 * Depend on GirFFI 0.7.0
 
-### 0.0.2 / 2013-08-03
+## 0.0.2 / 2013-08-03
 
 * Depend on GirFFI 0.6.6
 * Remove override for AttributeList#index
 
-### 0.0.1 / 2013-08-03
+## 0.0.1 / 2013-08-03
 
 * Initial release
