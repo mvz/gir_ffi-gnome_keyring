@@ -12,5 +12,9 @@ module GnomeKeyring
       :list_copy,
       :list_free,
       :list_to_glist
+
+    def make_finalizer
+      # Don't make a finalizer; Use FFI's regular free of the pointer instead.
+    end
   end
 end
