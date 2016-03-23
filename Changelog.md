@@ -1,5 +1,11 @@
 # Change log
 
+## 0.0.6 / 2016-03-23
+
+* Depend on GirFFI 0.10.0
+* Update overrides to work with GirFFI's changed API
+* Avoid using g_boxed_free to free Attribute
+
 ## 0.0.5 / 2016-01-21
 
 * Depend on GirFFI 0.9.0
