@@ -6,7 +6,7 @@ describe GnomeKeyring do
       body = lambda { |type, attrs, listptr|
         type.must_equal :generic_secret
         attrs.must_be_instance_of GnomeKeyring::AttributeList
-        listptr.must_be_instance_of GirFFI::InOutPointer
+        listptr.must_be_instance_of FFI::MemoryPointer
         :ok
       }
 
@@ -50,7 +50,7 @@ describe GnomeKeyring do
       body = lambda { |keyring, id, attributes|
         keyring.to_utf8.must_equal "foo"
         id.must_equal 42
-        attributes.must_be_instance_of GirFFI::InOutPointer
+        attributes.must_be_instance_of FFI::MemoryPointer
         :ok
       }
 
