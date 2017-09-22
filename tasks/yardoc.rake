@@ -6,4 +6,5 @@ begin
     t.options = ['--private', '--protected', '--readme', 'README.md']
   end
 rescue LoadError
+  nil # Do nothing
 end
