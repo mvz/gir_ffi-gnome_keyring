@@ -24,7 +24,7 @@ module GnomeKeyring
     _v3 = FFI::MemoryPointer.new :pointer
     _v4 = GnomeKeyring::Lib.gnome_keyring_find_items_sync(type, _v2, _v3)
     _v5 = GLib::List.wrap(GnomeKeyring::Found, _v3.get_pointer(0))
-    return [_v4, _v5]
+    [_v4, _v5]
   end
 
   def self.item_create_sync(keyring, type, display_name, attributes, secret,
@@ -39,7 +39,7 @@ module GnomeKeyring
                                                            update_if_exists,
                                                            _v7)
     _v9 = _v7.get_uint32(0)
-    return [_v8, _v9]
+    [_v8, _v9]
   end
 
   def self.item_get_attributes_sync(keyring, id)
@@ -47,7 +47,7 @@ module GnomeKeyring
     _v3 = FFI::MemoryPointer.new :pointer
     _v4 = GnomeKeyring::Lib.gnome_keyring_item_get_attributes_sync(_v1, id, _v3)
     attributes = GnomeKeyring::AttributeList.wrap(_v3.get_pointer(0))
-    return [_v4, attributes]
+    [_v4, attributes]
   end
 
   def self.item_set_attributes_sync(keyring, id, attributes)
