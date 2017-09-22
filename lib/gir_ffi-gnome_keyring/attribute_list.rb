@@ -15,7 +15,7 @@ module GnomeKeyring
       case it
       when self then it
       when FFI::Pointer then wrap it
-      else new.tap {|arr| arr.append_vals it }
+      else new.tap { |arr| arr.append_vals it }
       end
     end
 
