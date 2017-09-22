@@ -1,5 +1,3 @@
-# -*- encoding: utf-8 -*-
-
 Gem::Specification.new do |s|
   s.name = 'gir_ffi-gnome_keyring'
   s.version = '0.0.6'
