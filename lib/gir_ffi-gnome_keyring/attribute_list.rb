@@ -20,14 +20,14 @@ module GnomeKeyring
     end
 
     def append_string(name, value)
-      _v2 = GirFFI::InPointer.from(:utf8, name)
-      _v3 = GirFFI::InPointer.from(:utf8, value)
-      GnomeKeyring::Lib.gnome_keyring_attribute_list_append_string self, _v2, _v3
+      v2 = GirFFI::InPointer.from(:utf8, name)
+      v3 = GirFFI::InPointer.from(:utf8, value)
+      GnomeKeyring::Lib.gnome_keyring_attribute_list_append_string self, v2, v3
     end
 
     def append_uint32(name, value)
-      _v2 = GirFFI::InPointer.from(:utf8, name)
-      GnomeKeyring::Lib.gnome_keyring_attribute_list_append_uint32 self, _v2, value
+      v2 = GirFFI::InPointer.from(:utf8, name)
+      GnomeKeyring::Lib.gnome_keyring_attribute_list_append_uint32 self, v2, value
     end
 
     private

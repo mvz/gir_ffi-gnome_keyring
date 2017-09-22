@@ -20,39 +20,39 @@ module GnomeKeyring
   end
 
   def self.find_items_sync(type, attributes)
-    _v2 = GnomeKeyring::AttributeList.from(attributes)
-    _v3 = FFI::MemoryPointer.new :pointer
-    _v4 = GnomeKeyring::Lib.gnome_keyring_find_items_sync(type, _v2, _v3)
-    _v5 = GLib::List.wrap(GnomeKeyring::Found, _v3.get_pointer(0))
-    [_v4, _v5]
+    v2 = GnomeKeyring::AttributeList.from(attributes)
+    v3 = FFI::MemoryPointer.new :pointer
+    v4 = GnomeKeyring::Lib.gnome_keyring_find_items_sync(type, v2, v3)
+    v5 = GLib::List.wrap(GnomeKeyring::Found, v3.get_pointer(0))
+    [v4, v5]
   end
 
   def self.item_create_sync(keyring, type, display_name, attributes, secret,
                             update_if_exists)
-    _v1 = GirFFI::InPointer.from_utf8(keyring)
-    _v3 = GirFFI::InPointer.from_utf8(display_name)
-    _v4 = GnomeKeyring::AttributeList.from(attributes)
-    _v5 = GirFFI::InPointer.from_utf8(secret)
-    _v7 = FFI::MemoryPointer.new :uint32
-    _v8 = GnomeKeyring::Lib.gnome_keyring_item_create_sync(_v1, type, _v3, _v4,
-                                                           _v5,
-                                                           update_if_exists,
-                                                           _v7)
-    _v9 = _v7.get_uint32(0)
-    [_v8, _v9]
+    v1 = GirFFI::InPointer.from_utf8(keyring)
+    v3 = GirFFI::InPointer.from_utf8(display_name)
+    v4 = GnomeKeyring::AttributeList.from(attributes)
+    v5 = GirFFI::InPointer.from_utf8(secret)
+    v7 = FFI::MemoryPointer.new :uint32
+    v8 = GnomeKeyring::Lib.gnome_keyring_item_create_sync(v1, type, v3, v4,
+                                                          v5,
+                                                          update_if_exists,
+                                                          v7)
+    v9 = v7.get_uint32(0)
+    [v8, v9]
   end
 
   def self.item_get_attributes_sync(keyring, id)
-    _v1 = GirFFI::InPointer.from_utf8(keyring)
-    _v3 = FFI::MemoryPointer.new :pointer
-    _v4 = GnomeKeyring::Lib.gnome_keyring_item_get_attributes_sync(_v1, id, _v3)
-    attributes = GnomeKeyring::AttributeList.wrap(_v3.get_pointer(0))
-    [_v4, attributes]
+    v1 = GirFFI::InPointer.from_utf8(keyring)
+    v3 = FFI::MemoryPointer.new :pointer
+    v4 = GnomeKeyring::Lib.gnome_keyring_item_get_attributes_sync(v1, id, v3)
+    attributes = GnomeKeyring::AttributeList.wrap(v3.get_pointer(0))
+    [v4, attributes]
   end
 
   def self.item_set_attributes_sync(keyring, id, attributes)
-    _v1 = GirFFI::InPointer.from_utf8(keyring)
-    _v3 = GnomeKeyring::AttributeList.from(attributes)
-    GnomeKeyring::Lib.gnome_keyring_item_set_attributes_sync(_v1, id, _v3)
+    v1 = GirFFI::InPointer.from_utf8(keyring)
+    v3 = GnomeKeyring::AttributeList.from(attributes)
+    GnomeKeyring::Lib.gnome_keyring_item_set_attributes_sync(v1, id, v3)
   end
 end
