@@ -1,38 +1,38 @@
 require 'test_helper'
 
 describe GnomeKeyring::AttributeList do
-  it "descends from GLib::Array" do
+  it 'descends from GLib::Array' do
     GnomeKeyring::AttributeList.ancestors.must_include GLib::Array
   end
 
-  describe ".new" do
-    it "takes no arguments" do
+  describe '.new' do
+    it 'takes no arguments' do
       GnomeKeyring::AttributeList.new
       pass
     end
   end
 
-  describe ".wrap" do
-    it "wraps its argument in an AttributeList object" do
+  describe '.wrap' do
+    it 'wraps its argument in an AttributeList object' do
       orig = GnomeKeyring::AttributeList.new
       copy = GnomeKeyring::AttributeList.wrap(orig.to_ptr)
       copy.to_ptr.must_equal orig.to_ptr
     end
   end
 
-  describe ".from" do
+  describe '.from' do
     it "wraps its argument's pointer in an AttributeList object" do
       orig = GnomeKeyring::AttributeList.new
       copy = GnomeKeyring::AttributeList.from(orig)
       copy.to_ptr.must_equal orig.to_ptr
     end
 
-    it "wraps an empty array" do
+    it 'wraps an empty array' do
       attr = GnomeKeyring::AttributeList.from([])
       attr.to_a.must_equal []
     end
 
-    it "wraps an array of Attribute" do
+    it 'wraps an array of Attribute' do
       att = GnomeKeyring::Attribute.new
       att.name = 'foo'
       attr = GnomeKeyring::AttributeList.from([att])
@@ -42,8 +42,8 @@ describe GnomeKeyring::AttributeList do
     end
   end
 
-  describe "#append_string" do
-    it "appends a string attribute" do
+  describe '#append_string' do
+    it 'appends a string attribute' do
       list = GnomeKeyring::AttributeList.new
       list.append_string 'foo', 'bar'
       attr = list.index(0)
@@ -53,8 +53,8 @@ describe GnomeKeyring::AttributeList do
     end
   end
 
-  describe "#append_uint32" do
-    it "appends a uint32 attribute" do
+  describe '#append_uint32' do
+    it 'appends a uint32 attribute' do
       list = GnomeKeyring::AttributeList.new
       list.append_uint32 'baz', 42
       attr = list.index(0)
