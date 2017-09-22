@@ -1,5 +1,10 @@
 # Change log
 
+## 0.0.7 / 2017-09-22
+
+* Depend on GirFFI 0.11.0
+* Require CRuby 2.1 or above
+
 ## 0.0.6 / 2016-03-23
 
 * Depend on GirFFI 0.10.0
