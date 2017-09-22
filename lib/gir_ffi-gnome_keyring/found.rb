@@ -1,8 +1,9 @@
 require 'gir_ffi-gnome_keyring/attribute_list'
 
-module GnomeKeyring
-  load_class :Found
+GnomeKeyring.load_class :Found
 
+module GnomeKeyring
+  # Overrides for GnomeKeyringFound
   class Found
     remove_method :attributes
     remove_method :attributes=

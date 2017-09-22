@@ -1,6 +1,7 @@
 require 'gir_ffi-gnome_keyring/attribute'
 
 module GnomeKeyring
+  # GLib::Array alias used when returning lists of GnomeKeyringAttribute.
   class AttributeList < GLib::Array
     def self.new
       ptr = GnomeKeyring::Lib.gnome_keyring_attribute_list_new

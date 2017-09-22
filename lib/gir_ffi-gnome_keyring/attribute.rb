@@ -1,6 +1,6 @@
+GnomeKeyring.load_class :Attribute
 module GnomeKeyring
-  load_class :Attribute
-
+  # Overrides for GnomeKeyringAttribute
   class Attribute
     setup_method 'list_new'
     setup_method 'list_append_string'
