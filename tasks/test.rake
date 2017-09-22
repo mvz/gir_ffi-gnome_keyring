@@ -15,4 +15,4 @@ namespace :test do
 end
 
 desc 'Run unit and integration tests'
-task :test => ['test:unit', 'test:integration']
+task test: ['test:unit', 'test:integration']
