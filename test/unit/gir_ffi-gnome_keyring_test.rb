@@ -34,11 +34,11 @@ describe GnomeKeyring do
 
       GnomeKeyring::Lib.stub :gnome_keyring_item_create_sync, body do
         code, id = GnomeKeyring.item_create_sync('foo',
-                                                   :generic_secret,
-                                                   'bar',
-                                                   [],
-                                                   'secret-name',
-                                                   false)
+                                                 :generic_secret,
+                                                 'bar',
+                                                 [],
+                                                 'secret-name',
+                                                 false)
         code.must_equal :ok
         id.must_equal 42
       end
