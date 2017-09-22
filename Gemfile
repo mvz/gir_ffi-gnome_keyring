@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # The gem's dependencies are specified in gir_ffi-gnome_keyring.gemspec
 gemspec
