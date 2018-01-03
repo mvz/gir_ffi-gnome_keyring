@@ -1,25 +1,25 @@
 sudo: required
 dist: trusty
 language: ruby
-rvm:
-  - 2.1.8
-  - 2.2.4
-  - 2.3.3
-  - ruby-head
-  - ruby-head-clang
-  - jruby-9.0
-  - jruby-head
-  - rbx-3.19
-matrix:
-  allow_failures:
-    - rvm: jruby-9.0
-    - rvm: jruby-head
-    - rvm: ruby-head
-    - rvm: ruby-head-clang
-    - rvm: rbx-3.19
+
 before_install:
   - sudo apt-get -qq update
-  # libgirepository1.0-dev: provides /usr/lib/libgirepository-1.0.so
-  # gir1.2-gnomekeyring-1.0: provides /usr/lib/girepository-1.0/GnomeKeyring-1.0.typelib
   - sudo apt-get install -y libgirepository1.0-dev gir1.2-gnomekeyring-1.0
-  - gem update bundler
+  - gem update --system
+
+rvm:
+  - 2.3
+  - 2.4
+  - 2.5
+  - ruby-head
+  - jruby-9.1.15.0
+  - jruby-head
+
+matrix:
+  allow_failures:
+    - rvm: jruby-head
+    - rvm: ruby-head
+
+branches:
+  only:
+    - master
