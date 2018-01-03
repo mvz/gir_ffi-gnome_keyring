@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 GnomeKeyring.load_class :Attribute
 module GnomeKeyring
   # Overrides for GnomeKeyringAttribute
