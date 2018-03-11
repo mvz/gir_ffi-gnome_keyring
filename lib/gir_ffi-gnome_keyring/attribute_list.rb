@@ -14,11 +14,11 @@ module GnomeKeyring
       super GnomeKeyring::Attribute, ptr
     end
 
-    def self.from(it)
-      case it
-      when self then it
-      when FFI::Pointer then wrap it
-      else new.tap { |arr| arr.append_vals it }
+    def self.from(object)
+      case object
+      when self then object
+      when FFI::Pointer then wrap object
+      else new.tap { |arr| arr.append_vals object }
       end
     end
 
