@@ -2,7 +2,7 @@ AllCops:
   Exclude:
     - 'tmp/**/*'
     - 'vendor/**/*'
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.1
 
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: same_line
