@@ -1,25 +1,95 @@
 AllCops:
   Exclude:
+    - 'examples/*'
     - 'tmp/**/*'
-    - 'vendor/**/*'
   TargetRubyVersion: 2.2
+
+# Dot at end of line makes it clearer that the line is not done
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+# Multi-line assignment should be simply indented. Aligning them makes it even
+# harder to keep a sane line length.
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
 
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: same_line
 
-# Test describe blocks can be any size
+# Multi-line method calls should be simply indented. Aligning them makes it
+# even harder to keep a sane line length.
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+# Force consistent spacing independent of block contents
+Layout/SpaceBeforeBlockBraces:
+  EnforcedStyleForEmptyBraces: space
+
+# This cop gives bad advice
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+# Allow if (foo = get_foo) style
+Lint/AssignmentInCondition:
+  AllowSafeAssignment: true
+
 Metrics/BlockLength:
   Exclude:
-    - 'test/**/*'
+    - 'test/**/*' # Test describe blocks can be any size
+    - '*.gemspec' # Gem spec blocks can be any size
 
 # Use lenient line length
 Metrics/LineLength:
-  Max: 100
+  Max: 95
+
+# Gtk+ has a lot of accessor method starting with get_ or set_
+Naming/AccessorMethodName:
+  Enabled: false
+
+# GirFFI uses a ffi-something naming scheme.
+Naming/FileName:
+  Enabled: false
+
+# Allow and/or for control flow only
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+# Comment all the files!
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+# Require at least two dependent lines before suggesting a guard clause
+Style/GuardClause:
+  MinBodyLength: 2
+
+# Sometimes an if statement just looks better than next with a guard clause
+Style/Next:
+  Enabled: false
+
+# Use older RuboCop default
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%w': ()
+
+# Allow explicit return with multiple return values
+Style/RedundantReturn:
+  AllowMultipleReturnValues: true
+
+# Always use raise to raise exceptions
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+# Allow meaningful names for single-line reduce etc.
+Style/SingleLineBlockParams:
+  Enabled: false
+
+# I like to have symbols always look like symbols
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+# Project-specific configuration goes here.
 
 # Some of GnomeKeyring's functions have long parameter lists
 Metrics/ParameterLists:
   Max: 7
 
-# GirFFI uses a ffi-something naming scheme.
-Naming/FileName:
-  Enabled: false

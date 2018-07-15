@@ -22,17 +22,18 @@ describe GnomeKeyring do
 
   describe '.item_create_sync' do
     it 'calls Lib.gnome_keyring_item_create_sync with the correct values' do
-      body = lambda { |keyring, type, display_name, attributes, secret, update_if_exists, item_id|
-        keyring.to_utf8.must_equal 'foo'
-        type.must_equal :generic_secret
-        display_name.to_utf8.must_equal 'bar'
-        attributes.must_be_instance_of GnomeKeyring::AttributeList
-        secret.to_utf8.must_equal 'secret-name'
-        update_if_exists.must_equal false
+      body =
+        lambda { |keyring, type, display_name, attributes, secret, update_if_exists, item_id|
+          keyring.to_utf8.must_equal 'foo'
+          type.must_equal :generic_secret
+          display_name.to_utf8.must_equal 'bar'
+          attributes.must_be_instance_of GnomeKeyring::AttributeList
+          secret.to_utf8.must_equal 'secret-name'
+          update_if_exists.must_equal false
 
-        item_id.put_int32 0, 42
-        :ok
-      }
+          item_id.put_int32 0, 42
+          :ok
+        }
 
       GnomeKeyring::Lib.stub :gnome_keyring_item_create_sync, body do
         code, id = GnomeKeyring.item_create_sync('foo',
