@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.10 / 2018-09-08
+
+* Drop support for Ruby 2.1
+* Depend on GirFFI 0.13.0
+
 ## 0.0.9 / 2018-05-22
 
 * Restore support for Ruby 2.1 and 2.2
@@ -18,7 +23,7 @@
 
 * Depend on GirFFI 0.10.0
 * Update overrides to work with GirFFI's changed API
-* Avoid using g_boxed_free to free Attribute
+* Avoid using `g_boxed_free` to free Attribute
 
 ## 0.0.5 / 2016-01-21
 
@@ -35,7 +40,7 @@
 ## 0.0.2 / 2013-08-03
 
 * Depend on GirFFI 0.6.6
-* Remove override for AttributeList#index
+* Remove override for `AttributeList#index`
 
 ## 0.0.1 / 2013-08-03
 
