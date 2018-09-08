@@ -10,10 +10,10 @@ require 'gir_ffi-gnome_keyring/found'
 
 # Overrides for GnomeKeyring singleton methods
 module GnomeKeyring
-  setup_method :find_items_sync
-  setup_method :item_create_sync
-  setup_method :item_get_attributes_sync
-  setup_method :item_set_attributes_sync
+  setup_method! :find_items_sync
+  setup_method! :item_create_sync
+  setup_method! :item_get_attributes_sync
+  setup_method! :item_set_attributes_sync
 
   class << self
     remove_method :find_items_sync
