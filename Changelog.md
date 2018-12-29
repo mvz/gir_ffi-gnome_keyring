@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Drop support for Ruby 2.2
+
 ## 0.0.10 / 2018-09-08
 
 * Drop support for Ruby 2.1
