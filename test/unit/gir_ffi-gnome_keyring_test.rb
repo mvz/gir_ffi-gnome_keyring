@@ -23,7 +23,8 @@ describe GnomeKeyring do
   describe ".item_create_sync" do
     it "calls Lib.gnome_keyring_item_create_sync with the correct values" do
       body =
-        lambda { |keyring, type, display_name, attributes, secret, update_if_exists, item_id|
+        lambda { |keyring, type, display_name, attributes, secret,
+                  update_if_exists, item_id|
           _(keyring.to_utf8).must_equal "foo"
           _(type).must_equal :generic_secret
           _(display_name.to_utf8).must_equal "bar"
