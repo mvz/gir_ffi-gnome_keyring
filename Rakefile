@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'bundler/gem_helper'
-require 'rake/clean'
+require "bundler/gem_helper"
+require "rake/clean"
 
 Bundler::GemHelper.install_tasks
 
-import 'tasks/test.rake'
-import 'tasks/yardoc.rake'
+import "tasks/test.rake"
+import "tasks/yardoc.rake"
 
-task default: 'test'
+task default: "test"
