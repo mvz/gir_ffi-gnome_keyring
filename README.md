@@ -4,7 +4,9 @@ by Matijs van Zuijlen
 
 ## Description
 
-GirFFI-based bindings for GnomeKeyring
+GirFFI-based bindings for the deprecated GnomeKeyring client library
+
+**Note:** The GnomeKeyring client library is deprecated and you should use `libsecret` instead.
 
 ## Status
 
