@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'gir_ffi'
+require "gir_ffi"
 
-GirFFI.setup 'GnomeKeyring'
+GirFFI.setup "GnomeKeyring"
 
-require 'gir_ffi-gnome_keyring/attribute'
-require 'gir_ffi-gnome_keyring/attribute_list'
-require 'gir_ffi-gnome_keyring/found'
+require "gir_ffi-gnome_keyring/attribute"
+require "gir_ffi-gnome_keyring/attribute_list"
+require "gir_ffi-gnome_keyring/found"
 
 # Overrides for GnomeKeyring singleton methods
 module GnomeKeyring

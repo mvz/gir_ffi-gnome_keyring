@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'gir_ffi-gnome_keyring/attribute'
+require "gir_ffi-gnome_keyring/attribute"
 
 module GnomeKeyring
   # GLib::Array alias used when returning lists of GnomeKeyringAttribute.
