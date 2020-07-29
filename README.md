@@ -44,9 +44,17 @@ GirFFI-based bindings for GnomeKeyring
 
     gem install gir_ffi-gnome_keyring
 
+## Requirements
+
+This gem depends on the `gir_ffi` gem and its requirements. In addition, it
+needs introspection data for the gnome-keyring client library.
+
+On Debian and Ubuntu, you can get this by installing `gir1.2-gnomekeyring-1.0`.
+Note that this package is not available on newer versions of Debian and Ubuntu.
+
 ## License
 
-Copyright &copy; 2013&ndash;2016, 2018 [Matijs van Zuijlen](http://www.matijs.net)
+Copyright &copy; 2013&ndash;2016, 2018&ndash;2020 [Matijs van Zuijlen](http://www.matijs.net)
 
 GirFFI-GnomeKeyring is free software, distributed under the terms of the GNU
 Lesser General Public License, version 2.1 or later. See the file COPYING.LIB
