@@ -9,6 +9,10 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 2.4
 
+# Make BeginEndAlignment behavior match EndAlignment
+Layout/BeginEndAlignment:
+  EnforcedStyleAlignWith: begin
+
 # Be lenient with line length
 Layout/LineLength:
   Max: 92
