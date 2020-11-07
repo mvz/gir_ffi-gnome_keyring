@@ -6,6 +6,7 @@ AllCops:
   Exclude:
     - 'examples/*'
     - 'tmp/**/*'
+    - 'vendor/bundle/**/*'
   NewCops: enable
   TargetRubyVersion: 2.4
 
