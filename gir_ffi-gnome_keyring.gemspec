@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake", "~> 13.0"
   s.add_development_dependency "rubocop", "~> 1.2.0"
   s.add_development_dependency "rubocop-minitest", "~> 0.10.1"
-  s.add_development_dependency "rubocop-performance", "~> 1.8.1"
+  s.add_development_dependency "rubocop-performance", "~> 1.9.0"
 
   s.require_paths = ["lib"]
 end
