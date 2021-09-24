@@ -5,7 +5,8 @@ require "rake/clean"
 
 Bundler::GemHelper.install_tasks
 
-import "tasks/test.rake"
-import "tasks/yardoc.rake"
+load "tasks/test.rake"
+load "tasks/manifest.rake"
+load "tasks/yardoc.rake"
 
 task default: "test"

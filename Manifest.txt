@@ -1,0 +1,7 @@
+lib/gir_ffi-gnome_keyring.rb
+lib/gir_ffi-gnome_keyring/attribute.rb
+lib/gir_ffi-gnome_keyring/attribute_list.rb
+lib/gir_ffi-gnome_keyring/found.rb
+Changelog.md
+README.md
+COPYING.LIB
