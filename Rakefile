@@ -10,3 +10,5 @@ load "tasks/manifest.rake"
 load "tasks/yardoc.rake"
 
 task default: "test"
+task default: "manifest:check"
+task build: "manifest:check"
