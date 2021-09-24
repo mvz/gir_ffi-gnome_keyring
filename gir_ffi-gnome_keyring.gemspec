@@ -14,20 +14,15 @@ Gem::Specification.new do |s|
   s.email = ["matijs@matijs.net"]
   s.homepage = "http://www.github.com/mvz/gir_ffi-gnome_keyring"
 
+  s.files = File.read("Manifest.txt").split
   s.rdoc_options = ["--main", "README.md"]
-
-  s.files = Dir["{lib,test,tasks,examples}/**/*",
-                "*.md",
-                "Rakefile",
-                "COPYING.lIB"] & `git ls-files -z`.split("\0")
-
-  s.extra_rdoc_files = ["README.md", "Changelog.md"]
-  s.test_files = `git ls-files -z -- test`.split("\0")
+  s.extra_rdoc_files = ["Changelog.md"]
 
   s.add_runtime_dependency "gir_ffi", "~> 0.15.1"
 
   s.add_development_dependency "minitest", "~> 5.0"
   s.add_development_dependency "rake", "~> 13.0"
+  s.add_development_dependency "rake-manifest", "~> 0.2.0"
   s.add_development_dependency "rubocop", "~> 1.21.0"
   s.add_development_dependency "rubocop-minitest", "~> 0.15.0"
   s.add_development_dependency "rubocop-performance", "~> 1.11.0"
