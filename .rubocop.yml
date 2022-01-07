@@ -1,3 +1,7 @@
+inherit_mode:
+  merge:
+    - Exclude
+
 require:
   - rubocop-performance
   - rubocop-minitest
@@ -5,8 +9,6 @@ require:
 AllCops:
   Exclude:
     - 'examples/*'
-    - 'tmp/**/*'
-    - 'vendor/bundle/**/*'
   NewCops: enable
   TargetRubyVersion: 2.6
 
