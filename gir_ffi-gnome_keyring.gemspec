@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "gir_ffi-gnome_keyring"
-  spec.version = "0.0.11"
+  spec.version = "0.0.12"
   spec.authors = ["Matijs van Zuijlen"]
   spec.email = ["matijs@matijs.net"]
 

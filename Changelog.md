@@ -1,8 +1,9 @@
 # Changelog
 
-## Unreleased
+## 0.0.11 / 2022-01-23
 
-* Drop support for Ruby 2.2 and 2.3
+* Drop support for Ruby 2.5 and below
+* Support Ruby 2.6 through 3.1
 * Depend on GirFFI 0.15.1
 
 ## 0.0.10 / 2018-09-08
