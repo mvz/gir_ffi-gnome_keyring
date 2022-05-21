@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.extra_rdoc_files = ["Changelog.md"]
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "gir_ffi", "~> 0.15.1"
+  spec.add_runtime_dependency "gir_ffi", "~> 0.16.0"
 
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "rake", "~> 13.0"
