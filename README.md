@@ -1,3 +1,5 @@
+**This project is no longer being maintained. GnomeKeyring is no longer available in modern Linux distributions and you should use `libsecret` instead,**
+
 # GirFFI-GnomeKeyring
 
 by Matijs van Zuijlen
